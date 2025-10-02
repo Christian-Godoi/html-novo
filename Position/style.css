@@ -1,0 +1,33 @@
+div{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+.caixa1{
+    background-color: red;
+    position: static; /*posição padrão*/
+    position: relative; /*posição relativa*/
+    top: 50px;
+    left: 50px;
+    z-index: -1; 
+}
+.caixa2{
+    background-color: blue;
+    position: absolute; /*ele deixa a caixa onde quiser*/
+    top: 100px;
+    left: 200px;
+}
+.caixa3{
+    background-color: green;
+    position: fixed; /*A posição vai ficar fixa no lugar*/
+    bottom: 20px;
+    right: 20px;
+}
+body {
+    height: 200vh;/*vh e vw*/
+}
+
+.caixa1{
+    position: sticky;
+    top: 0;
+}

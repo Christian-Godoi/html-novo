@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: blue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 10px;
+    position: fixed;
+    width: 97%;
+    color: white;
+}
+
+
+main{
+    padding-top: 200px;
+}
+
+p{
+    text-align: justify;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.caixa1{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute; 
+right: 50px;
+bottom: 50px;
+}
+
+.caixa2{
+    width: 150px;
+    height: 150px;
+       background-color: orange;
+       position: sticky;
+       top: 0px;
+}
+
+.caixa3{
+     width: 150px;
+    height: 150px;
+       background-color: purple;
+       position: relative;
+       top: 20px;
+       left: 20px;
+}
