@@ -1,0 +1,30 @@
+header{
+ background-color: #C99C9E;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 60px;
+
+}
+
+section{
+    display: flex; 
+    align-items: center;
+    justify-content:center;
+}
+
+a.prod {
+    color: white;
+    background-color: #851B1B;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+      display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 85px;
+}
