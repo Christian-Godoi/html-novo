@@ -1,0 +1,22 @@
+a{
+    background-color: lightgreen;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 7px;
+    color: black;
+}
+img{
+    opacity: 1; /*transparência da imagem*/
+    transform: scale(0.5); /*da zoom*/
+}
+
+a:hover{
+    background-color: rgb(5, 204, 5);
+    color: yellow;
+    border-radius: 15px;
+    padding: 15px;
+}
+img:hover{
+    opacity: 0.5;
+    transform: scale(0.6);
+}
