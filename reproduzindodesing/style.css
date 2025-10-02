@@ -1,3 +1,11 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
 header{
  background-color: #C99C9E;
     display: flex;
@@ -13,11 +21,16 @@ section{
     justify-content:center;
 }
 
+h2{
+    font-size: 40px;
+}
+
 a.prod {
     color: white;
     background-color: #851B1B;
     padding: 18px;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 footer{
