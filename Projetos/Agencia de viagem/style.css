@@ -1,0 +1,22 @@
+
+*{
+margin: 0;
+padding: 0;
+border: 0;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header{
+    background-color: #1d0f6e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 70px;
+}
+
+.aviao{
+    background-image: url(img/avizao.png);
+    height: 750px;
+    background-repeat: no-repeat;
+}

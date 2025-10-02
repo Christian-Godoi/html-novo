@@ -1,0 +1,22 @@
+body{
+    background-image: url(https://i.pinimg.com/474x/78/98/8b/78988b9c8a7b5d2823505086f41cc7f9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20px 50px;
+    background-attachment: fixed;
+    /*scroll - fundo mexe com o texto 
+    fixed - fundo fica fixo*/
+    background-color:orange;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: lightgray;
+}
+
+p{
+    font-size: 25px;
+
+}

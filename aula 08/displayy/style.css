@@ -1,0 +1,34 @@
+.item1, .item2, .item3, .item4 {
+    width: 50px;
+    height: 50px;
+}
+
+.item1{
+    background-color: green;
+}
+
+.item2 {
+    background-color: blue;
+}
+
+.item3{
+    background-color: red;
+}
+
+.item4{
+    background-color: orange;
+    flex-grow: 1; /*Item vai crescer enquanto der*/
+}
+
+
+.container {
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row; /*Direção dos elementos*/
+    justify-content: center; /*Alinhamento na horizontal*/
+    align-items: flex-start; /*Alinhamento na vertical*/
+    flex-wrap: wrap; /*Colocar elementos em outra linha*/
+   
+} 
