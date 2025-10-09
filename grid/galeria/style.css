@@ -1,0 +1,15 @@
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: auto 35% auto;
+   
+    
+    height: 100vh;
+    gap: 5px;
+}
+img{
+    height: 200px;
+    width: 300px;
+     margin-left: 150px;
+     padding-top: 50px;
+}
