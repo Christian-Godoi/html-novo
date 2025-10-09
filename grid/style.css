@@ -1,0 +1,53 @@
+body{
+    display: grid;
+    grid-template-columns: 30% 70% 30%;
+    grid-template-columns: auto 40% auto;
+    
+    height: 100vh;
+    gap: 5px;
+   
+}
+div{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    margin-left: 200px;
+    
+}
+
+.caixa1 {
+    background-color: red;
+}
+.caixa2 {
+    background-color: blue;
+}
+.caixa3{
+    background-color: green;
+}
+.caixa4{
+    background-color: yellow;
+}
+.caixa5{
+    background-color: orange;
+}
+.caixa6{
+    background-color: purple;
+}
+.caixa7{
+    background-color: brown;
+}
+.caixa8{
+    background-color: black;
+}
+.caixa9{
+    background-color: darkcyan;
+}
+.caixa10{
+    background-color: gray;
+}
+.caixa11{
+    background-color: pink;
+}
+.caixa12{
+    background-color: bisque;
+}
