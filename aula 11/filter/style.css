@@ -1,0 +1,55 @@
+header{
+    background-color: lightgreen;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+img{
+    width: 250px;
+}
+.Blur{
+    filter: blur(4px);
+}
+.GrayScale{
+    filter: grayscale(100%);
+}
+.Sepia{
+    filter: sepia(100%);
+}
+
+.Brightness:hover{
+     transform: scale(200%);
+    filter: brightness(300%);
+   
+}
+.Invert{
+    filter: invert(100%);
+}
+.Contrast{
+    filter: contrast(200%);
+}
+
+.cartazes{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: auto 35% auto;
+   
+    height: 100vh;
+    gap: 5px;
+}
+img{
+    
+     margin-left: 150px;
+     padding-top: 50px;
+}
+.a1:hover,.a2:hover,.a3:hover,.a4:hover,.a5:hover{
+     filter: blur(0px);
+     filter: grayscale(0%);
+}
+
+.a1,.a2,.a3,.a4,.a5{
+     filter: blur(5px);
+    filter: grayscale(100%);
+}
+
