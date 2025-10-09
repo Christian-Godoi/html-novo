@@ -4,6 +4,7 @@
 }
 
 main{
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto auto auto;
