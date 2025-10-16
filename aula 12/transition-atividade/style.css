@@ -83,3 +83,11 @@ div:hover{
        transform: scale(110%);
        box-shadow: 0 0 40px gray;
 }
+h1{
+    text-align: center;
+    color: black;
+}
+.ss{
+    text-align: center;
+ ;
+}
