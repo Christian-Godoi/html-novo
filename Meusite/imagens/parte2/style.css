@@ -1,0 +1,84 @@
+*{
+    overflow-x: hidden;
+margin: 0;
+padding: 0;
+border: 0;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    background-color: #404040;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 70px;
+}
+
+.titulo{
+font-size: 40px;
+}
+.aolado{
+    margin-top: 12px;
+}
+footer{
+    background-color: #404040;
+    color: #f0f0f0;
+   
+    padding: 15px; 
+    margin-top: 50px; 
+    position:absolute; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center;
+}
+
+img{
+    height: 600px;
+    width: 900px;
+     transition: width 3s ease;
+}
+img:hover{
+    width: 1000px;
+}
+
+p{
+    font-size: 20px;
+}
+section{
+    margin-left: 500px;
+       margin-top: 70px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+.um{
+    transition: background-color 1s ease;
+   
+  
+}
+.um:hover{
+    background-color: black;
+    color: white;
+    transition-delay: 0.1s;
+
+ width: 700px;
+}
+div{
+    width: 700px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: wheat;
+}
+h2{
+    background-color: #404040;
+    transition: background-color 1s ease;
+}
+h2:hover{
+       color: wheat;
+      transition-timing-function: ease;
+        text-decoration: underline;
+}
