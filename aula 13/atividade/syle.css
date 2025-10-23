@@ -1,0 +1,147 @@
+.quadrado{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    animation-name: movimento;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: white;
+}
+@keyframes movimento {
+    0%{
+        transform: translateX(0);
+        background-color: red;
+    } 100%{
+        transform: translateX(200px);
+        background-color: blue;
+    }
+}
+
+.quadrado2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: mudaCor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+     margin-top: 50px;
+      color: white;
+   
+}
+@keyframes mudaCor {
+  
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: green;
+    }
+    70%{
+        background-color: blue;
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+button{
+    margin-top: 50px;
+    background-color: lightblue;
+    border-radius: 360px;
+    animation-name: aumentar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-left: 80px;
+}
+@keyframes aumentar {
+    from{
+    transform: scale(1);
+    background-color: lightblue;
+    color: black;
+    }
+    to{
+        transform: scale(2);
+        background-color: lightgreen;
+        color: white;
+    }
+}
+
+.texto{
+    color: red;
+    animation: piscando 2s infinite alternate;
+     margin-top: 50px;
+      
+   
+}
+@keyframes piscando {
+  
+    0%{
+        color: red;
+    }
+    50%{
+       color: green;
+    }
+    100%{
+        color: blue;
+}
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+.sol{
+    animation: nascendo 3s infinite alternate;
+}
+@keyframes nascendo {
+    0%{
+        transform: translateY(0);
+    } 100%{
+        transform: translateY(200px);
+    }
+}
+.montanha{
+    background-color: black;
+     width: 200px;
+    height: 200px;
+    margin-top: 30px;
+        border: 9px solid black;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.coracao{
+    animation: batendo 5s infinite alternate;
+}
+@keyframes batendo {
+    0%{
+    transform: scale(1);
+    }
+    25%{
+        transform: scale(1.1);
+       
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.texto2{
+    animation: flutuando 2s infinite alternate;
+}
+@keyframes flutuando {
+    0%{
+        transform: translateY(0);
+    } 100%{
+        transform: translateY(50px);
+    }
+}
