@@ -1,0 +1,103 @@
+.um{
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+.um:hover{
+    background-color: black;
+    color: white;
+}
+.dois{
+    background-color: lightblue;
+    color: black;
+     transition: 0.3s ease-in-out;
+}
+.dois:hover{
+    background-color: blue;
+    color: white;
+}
+.tres{
+     background-color: brown;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+.tres:hover{
+    background-color: orange;
+    color: white;
+}
+.quatro{
+background-color: green;
+color: white;
+}
+.quatro:active{
+    background-color: lightgreen;
+    transform: scale(0.9);
+}
+.roxo:focus{
+    box-shadow: 5px 5px 5px gray;
+    border: 2px solid purple;
+outline: none;
+}
+.teclado{
+  
+      margin: 0 30px 40px; 
+      text-align: center;
+        box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+     transition: background-color 1s ease;
+     width: 600px;
+}
+
+.teclado:hover{
+       background-color: lightgray;
+       transform: scale(110%);
+       box-shadow: 0 0 40px gray;
+}
+.poster{
+    height: 300px;
+    filter: blur(0px);
+     filter: grayscale(0%);
+}
+.poster:hover{
+    filter: blur(5px);
+     filter: grayscale(100%);
+}
+.cinco{
+    background-color: gray;
+    color: white;
+}
+.cinco:hover{
+    background-color: lightblue;
+}
+.cinco:active{
+    background-color: blue;
+    transform: scale(0.9);
+}
+.cinco:focus{
+      border: 2px solid orange;
+}
+.formulario1{
+      box-shadow: 0 0 10px gray;
+      width: 600px;
+}
+.formulario{
+    margin: 0 30px 40px; 
+    text-align: center; 
+    border-radius: 5px;
+    transition: background-color 1s ease;
+}
+.formulario:focus{
+box-shadow: 5px 5px 5px gray;
+border: 2px solid blue;
+outline: none;
+}
+.seis{
+     transition: 0.3s ease-in-out;
+}
+.seis:hover{
+    background-color: black;
+    color: white;
+}
+.seis:active{
+    transform: scale(0.9);
+}
