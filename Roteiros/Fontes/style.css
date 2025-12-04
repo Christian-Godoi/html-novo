@@ -1,0 +1,7 @@
+.fonte1{
+    font-family: "Roboto Slab", serif;
+}
+@font-face {
+    font-family: "momo";
+    src: url(font/serif);
+}
