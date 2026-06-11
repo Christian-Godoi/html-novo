@@ -9,9 +9,9 @@
 
 const CAROUSEL_INTERVAL_MS = 5000;
 const carouselImages = [
-    "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&h=500&q=80",
-    "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&h=500&q=80",
-    "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&h=500&q=80"
+    "1.png",
+    "2.webp",
+    "3.jpg"
 ];
 
 const carouselTitles = [
@@ -85,9 +85,6 @@ carouselElements.dots.forEach((dot, dotIndex) => {
     });
 });
 
-/* --------------------------------------------------------
-   Busca de produtos
-   -------------------------------------------------------- */
 
 const searchInput = document.getElementById("pesquisa");
 const searchResultMessage = document.getElementById("resultado");
@@ -116,9 +113,6 @@ function searchProducts() {
 
 searchInput.addEventListener("input", searchProducts);
 
-/* --------------------------------------------------------
-   Perguntas frequentes (FAQ)
-   -------------------------------------------------------- */
 
 const faqQuestions = document.querySelectorAll(".pergunta");
 
@@ -131,9 +125,6 @@ faqQuestions.forEach((question) => {
     });
 });
 
-/* --------------------------------------------------------
-   Cadastro de cliente e modal de sucesso
-   -------------------------------------------------------- */
 
 const form = document.getElementById("petRegistrationForm");
 const modalOverlay = document.getElementById("successModalOverlay");
@@ -170,10 +161,6 @@ form.addEventListener("submit", (event) => {
 });
 
 document.getElementById("modalCloseBtn").addEventListener("click", closeModal);
-
-/* --------------------------------------------------------
-   Ações dos botões de compra
-   -------------------------------------------------------- */
 
 const buyButtons = document.querySelectorAll(".btn-buy");
 
