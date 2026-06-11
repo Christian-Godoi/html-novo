@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas e Companhia - Pet Shop | Alto de Pinheiros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegação principal -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-area">
+                <img src="logo.png" alt="Logo Patas e Companhia" class="nav-logo">
+                <span class="logo-text">Patas e <span class="accent-text">Companhia</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#inauguracao">Inauguração</a>
+                <a href="#sobre-nos">Quem Somos</a>
+                <a href="#carousel-section">Nosso Espaço</a>
+                <a href="#loja">Loja</a>
+                <a href="#faq">Dúvidas</a>
+                <a href="#cadastro" class="cta-nav">Fazer Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção principal / Hero -->
+    <section id="inauguracao" class="hero">
+        <div class="hero-content">
+            <span class="badge">Inauguração em breve</span>
+            <h1>O quintal de casa do seu melhor amigo está chegando!</h1>
+            <p>Mais do que um pet shop, um espaço de acolhimento e carinho para os focinhos do Alto de Pinheiros. Venha comemorar com a gente!</p>
+            
+            <div class="inauguracao-data-box">
+                <div class="inauguracao-data-label">Dia do nosso encontro:</div>
+                <div class="inauguracao-data-valor">01 de Agosto de 2026</div>
+                <div class="inauguracao-data-sub">Sábado • Das 09:00 às 18:00 • Com buffet pet e caricaturas ao vivo!</div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#cadastro" class="btn btn-primary">Desconto de Boas-Vindas</a>
+                <a href="#loja" class="btn btn-secondary">Dar uma espiadinha na loja</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobre-nos" class="sobre-nos-section">
+        <div class="container">
+            <div class="sobre-nos-box">
+                <div class="sobre-nos-texto">
+                    <span class="sub-titulo">Feito por quem ama animais</span>
+                    <h2>Nós somos a equipe Patas!</h2>
+                    <p>A Patas e Companhia nasceu de um sonho simples: criar um lugar onde nós, tutores, tivéssemos total confiança de deixar nossos pets. Acreditamos que cada cão e gato tem sua própria personalidade e ritmo, e é assim que tratamos cada um que passa pela nossa porta.</p>
+                    <p>No dia <strong>01/08</strong>, vamos abrir nossa casa com muito orgulho. Preparamos um buffet com petiscos naturais, espaço instagramável e até um artista desenhando caricaturas dos pets na hora! Venha tomar um café com a gente e trazer seu parceiro de quatro patas para passear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de imagens do espaço -->
+    <section id="carousel-section" class="carousel-area">
+        <div class="container textocenter">
+            <h2 class="section-title">Um pedacinho do nosso dia a dia</h2>
+            <p class="section-subtitle">Dê uma olhada em como cada cantinho foi desenhado pensando no conforto deles.</p>
+        </div>
+        
+        <div class="carousel-container">
+            <img id="imagem-carousel" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&h=500&q=80" alt="Cão feliz brincando">
+            
+            <div class="carousel-caption">
+                <h3 id="titulo-carousel">Diversão e Saúde</h3>
+                <p id="texto-carousel">Espaços pensados para a diversão e socialização segura dos cães.</p>
+            </div>
+            
+            <button class="carousel-btn prev-btn" id="prevBtn">&lt;</button>
+            <button class="carousel-btn next-btn" id="nextBtn">&gt;</button>
+            
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span class="dot active" id="dot0"></span>
+                <span class="dot" id="dot1"></span>
+                <span class="dot" id="dot2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loja e produtos -->
+    <section id="loja" class="loja-section">
+        <div class="container">
+            <div class="loja-header">
+                <div>
+                    <h2 class="section-title textleft">Nossos Mimos Preferidos</h2>
+                    <p class="section-subtitle textleft">Fizemos uma curadoria do que há de melhor para a saúde e bem-estar do seu pet.</p>
+                </div>
+                <div class="search-box-container">
+                    <input type="text" placeholder="Buscar produto(s)..." class="search-input" id="pesquisa">
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <div class="product-card card" data-category="racao">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&w=600&h=500&q=80" alt="Ração natural para cão" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rações</span>
+                        <h2>Ração Natural NourishPet Cães Adultos Frango 10kg</h2>
+                        <div class="product-price-box">
+                            <span class="price-old">R$ 199,90</span>
+                            <span class="price-current">R$ 169,91</span>
+                            <span class="price-club">Preço Clube Patas+: R$ 152,91</span>
+                        </div>
+                        <button class="btn-buy">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="product-card card" data-category="coleiras">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=600&h=500&q=80" alt="Coleira pet" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Guias e Coleiras</span>
+                        <h2>Peitoral e Guia Regulável Soft Ziggy Floral</h2>
+                        <div class="product-price-box">
+                            <span class="price-old">R$ 59,90</span>
+                            <span class="price-current">R$ 50,91</span>
+                            <span class="price-club">Preço Clube Patas+: R$ 45,82</span>
+                        </div>
+                        <button class="btn-buy">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="product-card card" data-category="brinquedos">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&h=500&q=80" alt="Brinquedo de cachorro" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Brinquedos</span>
+                        <h2>Brinquedo Mordedor Resistente Macaco Pelúcia</h2>
+                        <div class="product-price-box">
+                            <span class="price-old">R$ 79,90</span>
+                            <span class="price-current">R$ 67,91</span>
+                            <span class="price-club">Preço Clube Patas+: R$ 61,12</span>
+                        </div>
+                        <button class="btn-buy">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="product-card card" data-category="outros">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=600&h=500&q=80" alt="Caminha pet" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Caminhas e Acessórios</span>
+                        <h2>Caminha Ninho Ortopédica Soft Lavável</h2>
+                        <div class="product-price-box">
+                            <span class="price-old">R$ 249,90</span>
+                            <span class="price-current">R$ 212,41</span>
+                            <span class="price-club">Preço Clube Patas+: R$ 191,17</span>
+                        </div>
+                        <button class="btn-buy">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="resultado" class="textocenter searchresult"></div>
+        </div>
+    </section>
+
+    <!-- Perguntas frequentes -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tiramos algumas dúvidas comuns para você planejar sua visita.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="pergunta">O que vai rolar de legal no dia da inauguração (01/08/2026)?</div>
+                    <div class="resposta">Preparamos uma recepção muito calorosa! Teremos um buffet pet recheado de petiscos artesanais saudáveis, caricaturas desenhadas ao vivo por um artista plástico para você levar para casa de recordação, amostras grátis de rações super premium e, claro, um café quentinho para os humanos. Ah, e 15% OFF de desconto em toda a loja!</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="pergunta">Posso levar meu cãozinho ou gatinho comigo?</div>
+                    <div class="resposta">Com certeza! Eles são os convidados de honra. Se trouxer seu gatinho ou pet arisco, recomendamos usar caixas de transporte confortáveis. Temos uma salinha "Cat Friendly" super aconchegante e silenciosa, afastada do agito principal, para que os felinos se sintam seguros e sem estresse.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="pergunta">As atividades e brincadeiras do dia têm custo?</div>
+                    <div class="resposta">De jeito nenhum! A mesa de comidinhas pet, as caricaturas ao vivo, a orientação do profissional veterinário e as brincadeiras são totalmente gratuitas. É o nosso presente de boas-vindas para toda a comunidade pet do Alto de Pinheiros.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="pergunta">Como funciona o Clube Patas+?</div>
+                    <div class="resposta">É o nosso clube de fidelidade gratuito. Ao se cadastrar no formulário abaixo, você entra automaticamente no clube. Isso te garante 15% de desconto de boas-vindas na inauguração física, frete grátis para compras no bairro a partir de R$ 99 e pontuação em todas as compras que viram cupons de desconto depois.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de cadastro -->
+    <section id="cadastro" class="cadastro-section">
+        <div class="container">
+            <div class="cadastro-box">
+                <div class="cadastro-info">
+                    <h2>Entre para a nossa família pet!</h2>
+                    <p>Faça seu cadastro rápido para garantir seu cupom de 15% OFF de inauguração, garantir brindes no dia da abertura e receber dicas e novidades úteis.</p>
+                </div>
+                
+                <div class="cadastro-form-container">
+                    <form id="petRegistrationForm" class="registration-form">
+                        <div class="form-group">
+                            <label for="clientName">Nome Completo</label>
+                            <input type="text" id="clientName" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientCity">Cidade</label>
+                            <input type="text" id="clientCity" placeholder="Cidade onde mora" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Número de Celular</label>
+                            <input type="tel" id="clientPhone" placeholder="(11) 99999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petsCount">Quantos pets moram com você?</label>
+                            <input type="number" id="petsCount" min="0" placeholder="Quantidade de animais" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-submit">Cadastrar no Clube Patas</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <span class="logo-text">Patas e <span class="accent-text">Companhia</span></span>
+                <p>O cantinho especial dos cães e gatos em São Paulo. Cuidado, carinho e respeito sempre.</p>
+                
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://tiktok.com" target="_blank">TikTok</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Vem visitar!</h3>
+                <p>Rua General Furtado Nascimento, 66<br>Alto de Pinheiros, São Paulo - SP<br>CEP: 05465-070</p>
+                <p class="footernote">Estacionamento gratuito para clientes.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Patas e Companhia. Feito com amor por amantes de pet para amantes de pet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmação do cadastro -->
+    <div class="modal-overlay hidden" id="successModalOverlay">
+        <div class="modal-card">
+            <h2>Cadastro concluído com sucesso! 🎉</h2>
+            <p>Oba! Seu nome foi incluído no nosso cadastro de inauguração. Seu cupom de 15% OFF e sua caricatura pet estão reservados!</p>
+            
+            <div class="modal-summary">
+                <p><strong>Nome:</strong> <span id="summaryName"></span></p>
+                <p><strong>Cidade:</strong> <span id="summaryCity"></span></p>
+                <p><strong>Celular:</strong> <span id="summaryPhone"></span></p>
+                <p><strong>Pets na casa:</strong> <span id="summaryPets"></span></p>
+            </div>
+            
+            <button class="btn btn-primary" id="modalCloseBtn">Que ótimo, até lá!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
