@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Para o melhor pai</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+		:root {
+			--ink: #173b3f;
+			--muted: #55716d;
+			--cream: #f5f0df;
+			--paper: #fffdf5;
+			--sage: #a9b89a;
+			--olive: #657a5c;
+			--gold: #d9a84e;
+			--line: rgba(23, 59, 63, .16);
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			color: var(--ink);
+			font-family: 'DM Sans', sans-serif;
+			background: var(--cream);
+			background-image: radial-gradient(rgba(23, 59, 63, .08) 1px, transparent 1px), linear-gradient(135deg, #f6f1e2, #dce3cd 58%, #f5ead1);
+			background-size: 18px 18px, 100% 100%;
+		}
+
+		main { width: min(1120px, 92%); margin: auto; padding: 38px 0 52px; }
+
+		.topbar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+		.mark { letter-spacing: .16em; font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+		.date-note { color: var(--muted); font-size: .82rem; }
+
+		.hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(34px, 7vw, 90px); align-items: center; padding: 76px 0 66px; }
+		.eyebrow { color: var(--olive); font-size: .76rem; letter-spacing: .2em; font-weight: 700; text-transform: uppercase; }
+		h1 { max-width: 620px; margin: 14px 0 20px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(3rem, 7vw, 6.4rem); line-height: .93; letter-spacing: 0; }
+		.intro { max-width: 490px; margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+
+		.countdown { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 38px; }
+		.unit { padding: 18px 16px 15px; background: rgba(255, 253, 245, .75); border: 1px solid rgba(23, 59, 63, .13); border-radius: 4px; box-shadow: 0 10px 28px rgba(23, 59, 63, .08); }
+		.number { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.4rem, 5vw, 4.1rem); line-height: 1; }
+		.label { display: block; margin-top: 8px; color: var(--olive); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; }
+
+		.photos { position: relative; min-height: 520px; }
+		.photo-frame { position: absolute; overflow: hidden; background: var(--sage); border: 12px solid var(--paper); box-shadow: 0 20px 42px rgba(23, 59, 63, .2); }
+		.photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+		.photo-one { width: 68%; height: 390px; top: 8px; right: 0; transform: rotate(3deg); }
+		.photo-two { width: 58%; height: 285px; bottom: 0; left: 3%; transform: rotate(-5deg); }
+		.photo-caption { position: absolute; right: 4%; bottom: -18px; z-index: 2; padding: 13px 17px; background: var(--gold); color: #fffdf5; font-family: 'Playfair Display', Georgia, serif; font-size: 1.05rem; transform: rotate(-3deg); }
+
+		.message { display: grid; grid-template-columns: 1fr 1.4fr; gap: 50px; align-items: center; padding: 32px 0; border-top: 1px solid var(--line); }
+		.message h2 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
+		.message p { margin: 0; color: var(--muted); line-height: 1.8; }
+		footer { padding-top: 34px; color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
+
+		@media (max-width: 720px) {
+			main { padding-top: 24px; }
+			.date-note { display: none; }
+			.hero { grid-template-columns: 1fr; padding: 54px 0 55px; }
+			.photos { min-height: 430px; }
+			.photo-one { height: 320px; }
+			.photo-two { height: 230px; }
+			.message { grid-template-columns: 1fr; gap: 18px; }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header class="topbar">
+			<span class="mark">Um laço para a vida toda</span>
+			<span class="date-note" id="data-alvo">Dia dos Pais</span>
+		</header>
+
+		<section class="hero">
+			<div>
+				<span class="eyebrow">Para o meu herói</span>
+				<h1>Contagem regressiva para o Dia dos Pais</h1>
+				<p class="intro">Cada momento ao seu lado vira uma memória bonita. Estamos contando os dias para celebrar todo o amor, cuidado e histórias que fazem de você um pai tão especial.</p>
+				<div class="countdown" aria-live="polite">
+					<div class="unit"><span class="number" id="meses">00</span><span class="label">meses</span></div>
+					<div class="unit"><span class="number" id="dias">00</span><span class="label">dias</span></div>
+					<div class="unit"><span class="number" id="horas">00</span><span class="label">horas</span></div>
+					<div class="unit"><span class="number" id="minutos">00</span><span class="label">minutos</span></div>
+					<div class="unit"><span class="number" id="segundos">00</span><span class="label">segundos</span></div>
+				</div>
+			</div>
+
+			<div class="photos" aria-label="Fotos de pai e filho">
+				<div class="photo-frame photo-one"><img src="pai1.png" alt="Retrato do meu pai" onerror="this.style.opacity='0'"></div>
+				<div class="photo-frame photo-two"><img src="par2.jpeg" alt="Meu pai e eu juntos" onerror="this.style.opacity='0'"></div>
+				<span class="photo-caption">Nosso vínculo cresce.</span>
+			</div>
+		</section>
+
+		<section class="message">
+			<h2>O melhor presente é ter você.</h2>
+			<p>Obrigado por cada abraço, conselho e momento compartilhado. Que este dia seja tão incrível quanto a presença que você traz para a minha vida.</p>
+		</section>
+
+		<footer>Feito com carinho para o melhor pai do mundo</footer>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
