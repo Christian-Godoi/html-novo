@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Diário de um Banana | Minha biblioteca</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap');
+
+		:root {
+			--ink: #202020;
+			--paper: #fffdf4;
+			--yellow: #f7d83d;
+			--red: #e94b3c;
+			--blue: #2d78b9;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			font-family: 'Patrick Hand', cursive;
+			background-color: #d9edf5;
+			background-image: linear-gradient(#b9d8e5 1px, transparent 1px), linear-gradient(90deg, #b9d8e5 1px, transparent 1px);
+			background-size: 28px 28px;
+		}
+
+		.pagina { max-width: 980px; margin: 0 auto; padding: 30px 20px 48px; }
+
+		header {
+			position: relative;
+			padding: 30px 28px 25px;
+			border: 3px solid var(--ink);
+			background: var(--yellow);
+			box-shadow: 8px 8px 0 var(--ink);
+			transform: rotate(-1deg);
+		}
+
+		header::after {
+			content: '...e outras histórias';
+			position: absolute;
+			right: 22px;
+			bottom: 10px;
+			color: var(--red);
+			font-size: 1.2rem;
+			transform: rotate(4deg);
+		}
+
+		h1, h2 { margin: 0; font-family: 'Permanent Marker', cursive; font-weight: 400; }
+		h1 { font-size: clamp(2.1rem, 6vw, 4.6rem); line-height: .95; }
+		h1 span { color: var(--red); }
+		header p { margin: 15px 0 0; font-size: 1.35rem; }
+
+		main { margin-top: 48px; }
+
+		.formulario {
+			display: grid;
+			grid-template-columns: 1fr 1fr auto;
+			gap: 14px;
+			align-items: end;
+			padding: 22px;
+			border: 3px solid var(--ink);
+			background: var(--paper);
+			box-shadow: 5px 5px 0 var(--blue);
+		}
+
+		label { display: block; margin-bottom: 5px; font-size: 1.15rem; font-weight: bold; }
+		input {
+			width: 100%;
+			padding: 11px 13px;
+			border: 2px solid var(--ink);
+			border-radius: 2px;
+			color: var(--ink);
+			background: #fff;
+			font: 1.15rem 'Patrick Hand', cursive;
+		}
+		input:focus { outline: 3px solid var(--red); outline-offset: 2px; }
+
+		button {
+			border: 2px solid var(--ink);
+			border-radius: 2px;
+			padding: 10px 16px;
+			color: #fff;
+			background: var(--red);
+			cursor: pointer;
+			font: bold 1.15rem 'Patrick Hand', cursive;
+			box-shadow: 3px 3px 0 var(--ink);
+		}
+		button:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+		button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+
+		.resumo { display: flex; justify-content: space-between; align-items: center; margin: 38px 0 14px; }
+		h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
+		#quantidade { padding: 5px 12px; border: 2px solid var(--ink); background: var(--yellow); font-size: 1.25rem; transform: rotate(2deg); }
+
+		#lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; padding: 0; list-style: none; }
+		.livro {
+			display: grid;
+			grid-template-columns: 90px 1fr;
+			gap: 15px;
+			min-height: 150px;
+			padding: 14px;
+			border: 3px solid var(--ink);
+			background: var(--paper);
+			box-shadow: 5px 5px 0 var(--ink);
+		}
+		.capa { width: 90px; height: 120px; border: 2px solid var(--ink); object-fit: cover; background: #eee; }
+		.detalhes { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; }
+		.titulo { margin: 0 0 4px; font-size: 1.45rem; line-height: 1; overflow-wrap: anywhere; }
+		.lanche { margin: 0 0 12px; color: var(--blue); font-size: 1.1rem; }
+		.apagar { margin-top: auto; padding: 5px 10px; font-size: 1rem; background: var(--ink); }
+		.vazio { grid-column: 1 / -1; padding: 24px; border: 2px dashed var(--ink); text-align: center; background: rgba(255,253,244,.8); font-size: 1.3rem; }
+
+		@media (max-width: 680px) {
+			.pagina { padding: 18px 12px 35px; }
+			header { padding: 24px 18px 34px; }
+			.formulario { grid-template-columns: 1fr; }
+			.formulario button { width: 100%; }
+			.resumo { align-items: flex-start; gap: 12px; flex-direction: column; }
+		}
+	</style>
+</head>
+<body>
+	<div class="pagina">
+		<header>
+			<h1>Diário de um <span>Banana</span></h1>
+			<p>Minha coleção de livros e lanches para ler sem fazer lição de casa.</p>
+		</header>
+
+		<main>
+			<form class="formulario" id="formulario">
+				<div>
+					<label for="titulo">Título do livro</label>
+					<input type="text" id="titulo" placeholder="Ex.: Rodrick é o cara" autocomplete="off" required>
+				</div>
+				<div>
+					<label for="lanche">Lanche da leitura</label>
+					<input type="text" id="lanche" placeholder="Ex.: Queijo fedido" autocomplete="off">
+				</div>
+				<button type="submit">+ Adicionar livro</button>
+			</form>
+
+			<div class="resumo">
+				<h2>Livros cadastrados</h2>
+				<span id="quantidade">0 livros</span>
+			</div>
+			<ul id="lista"></ul>
+		</main>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
