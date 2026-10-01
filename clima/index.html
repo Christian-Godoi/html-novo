@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8f1ed">
+    <title>Tempo Agora | Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="weather-shell">
+        <header class="weather-header">
+            <a class="weather-brand" href="#inicio"><span class="brand-sun" aria-hidden="true">☼</span><span>TEMPO<span class="brand-light">AGORA</span></span></a>
+            <span class="live-label"><span></span> CONDIÇÕES AO VIVO</span>
+        </header>
+        <section class="weather-search" id="inicio">
+            <p class="eyebrow">CLIMA LOCAL <span>·</span> PREVISÃO SEMANAL</p>
+            <h1>O tempo, <em>onde você está.</em></h1>
+            <p class="search-copy">Consulte as condições atuais e planeje os próximos dias.</p>
+            <form class="search-form" id="formulario">
+                <label class="visually-hidden" for="input">Digite o nome de uma cidade</label>
+                <span class="location-icon" aria-hidden="true">⌖</span>
+                <input type="search" id="input" placeholder="Buscar cidade, ex.: Suzano" autocomplete="off">
+                <button id="botao" type="submit">Ver previsão <span aria-hidden="true">↗</span></button>
+            </form>
+            <button type="button" class="quick-city" data-city="Suzano">EXPERIMENTE <span>Suzano, SP</span></button>
+        </section>
+        <section id="resultado" aria-live="polite" aria-busy="false">
+            <div class="weather-empty"><span aria-hidden="true">☀</span><p>Busque uma cidade para ver a previsão.</p></div>
+        </section>
+        <footer class="weather-footer"><span>FONTE: OPEN-METEO</span><span>PREVISÃO PARA OS PRÓXIMOS 7 DIAS</span></footer>
+    </main>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f2eee5">
+    <title>Pokédex | Arquivo Pokémon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="pokedex-shell">
+        <header class="topbar">
+            <a class="brand" href="#inicio" aria-label="Arquivo Pokémon, início">
+                <span class="brand-mark" aria-hidden="true"><span></span></span>
+                <span>ARQUIVO<br>POKÉMON</span>
+            </a>
+            <p class="edition">REGISTRO DE CAMPO <span>·</span> KANTO E ALÉM</p>
+            <span class="status"><span></span> SISTEMA ONLINE</span>
+        </header>
+        <section class="intro" id="inicio">
+            <p class="eyebrow">ENCICLOPÉDIA DIGITAL <span>№ 001</span></p>
+            <h1>Conheça seu<br><em>próximo Pokémon.</em></h1>
+            <p class="intro-copy">Busque uma espécie e consulte seus dados no arquivo da Pokédex.</p>
+            <form class="search-form" id="formulario">
+                <label class="visually-hidden" for="input">Nome ou número do Pokémon</label>
+                <span class="search-index" aria-hidden="true">⌕</span>
+                <input type="search" id="input" placeholder="Ex.: pikachu ou 25" autocomplete="off">
+                <button id="botao" type="submit">Buscar <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="search-hint">TENTE: <button class="suggestion" type="button" data-pokemon="bulbasaur">BULBASAUR</button><span> / </span><button class="suggestion" type="button" data-pokemon="charmander">CHARMANDER</button><span> / </span><button class="suggestion" type="button" data-pokemon="squirtle">SQUIRTLE</button></p>
+        </section>
+        <section class="result-section" aria-label="Resultado da busca">
+            <div class="section-heading"><span>FICHA DO POKÉMON</span><span>POKÉAPI / DADOS EM TEMPO REAL</span></div>
+            <div id="resultado" aria-live="polite" aria-busy="false">
+                <div class="empty-state"><span class="empty-ball" aria-hidden="true"><span></span></span><p>Sua próxima descoberta começa pela busca.</p></div>
+            </div>
+        </section>
+        <footer class="page-footer"><span>POKÉDEX DE CAMPO</span><span>CATALOGANDO O MUNDO, UM POKÉMON POR VEZ.</span></footer>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
