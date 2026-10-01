@@ -479,47 +479,6 @@ a {
   bottom: 72px;
 }
 
-/* IMPACT STRIP */
-.impact-strip {
-  background: var(--gray-100);
-  border-bottom: 1px solid #dfe5e0;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.impact-grid article {
-  min-height: 122px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-right: 1px solid #d7ddd8;
-  text-align: center;
-  padding: 20px;
-}
-
-.impact-grid article:first-child {
-  border-left: 1px solid #d7ddd8;
-}
-
-.impact-grid strong {
-  color: var(--green-900);
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.impact-grid span {
-  margin-top: 7px;
-  color: var(--gray-500);
-  text-transform: uppercase;
-  font-size: .66rem;
-  font-weight: 900;
-  letter-spacing: .04em;
-}
-
 /* PROJECT */
 .light-section {
   background: var(--white);
@@ -1373,15 +1332,6 @@ a {
 
   .float-badge {
     display: none;
-  }
-
-  .impact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .impact-grid article {
-    border: 1px solid #d7ddd8;
-    border-top: 0;
   }
 
   .split-title {
