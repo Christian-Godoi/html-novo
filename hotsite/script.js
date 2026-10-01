@@ -1,88 +1,222 @@
-const menuButton = document.querySelector('.menu');
-const navigation = document.querySelector('.nav');
+// =========================================================
+// CALEON HOTSITE - script.js
+// Menu mobile, animações e navegação suave
+// =========================================================
 
-menuButton?.addEventListener('click', () => {
-  const isOpen = navigation.classList.toggle('is-open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-});
+document.addEventListener("DOMContentLoaded", function () {
 
-navigation?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => navigation.classList.remove('is-open'));
-});
+  // =========================
+  // ELEMENTOS DO SITE
+  // =========================
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".main-nav");
+  const navLinks = document.querySelectorAll(".main-nav a");
+  const revealElements = document.querySelectorAll(".reveal");
+  const sections = document.querySelectorAll("main section[id]");
 
-const progressBars = document.querySelectorAll('.bar span');
-const progressObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('is-visible');
-    observer.unobserve(entry.target);
-  });
-}, { threshold: 0.35 });
 
-progressBars.forEach((bar) => progressObserver.observe(bar));
+  // =========================
+  // MENU MOBILE
+  // =========================
+  function setMenu(open) {
 
-const revealSections = document.querySelectorAll('[data-reveal="section"]');
-const revealItems = document.querySelectorAll('[data-reveal="item"]');
-
-const revealObserver = 'IntersectionObserver' in window
-  ? new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.15 })
-  : null;
-
-revealSections.forEach((section) => {
-  section.classList.add('reveal-target');
-  revealObserver?.observe(section);
-});
-
-revealItems.forEach((item, index) => {
-  item.classList.add('reveal-item');
-  item.style.transitionDelay = `${index * 120}ms`;
-  revealObserver?.observe(item);
-});
-
-if (!revealObserver) {
-  [...revealSections, ...revealItems].forEach((element) => element.classList.add('is-visible'));
-}
-
-const scrollRevealElements = document.querySelectorAll(
-  '.metrics-copy, .progress-row, .stat, .features-head, .feature, .team-photo, .team-copy, .footer-brand, .footer-column, .footer-newsletter, .footer-address, .footer-bottom'
-);
-
-scrollRevealElements.forEach((element, index) => {
-  element.classList.add('scroll-reveal');
-  element.style.transitionDelay = `${(index % 4) * 100}ms`;
-  revealObserver?.observe(element);
-});
-
-if (!revealObserver) {
-  scrollRevealElements.forEach((element) => element.classList.add('is-visible'));
-}
-
-const allRevealElements = document.querySelectorAll('.reveal-target, .reveal-item, .scroll-reveal');
-const revealOnScroll = () => {
-  allRevealElements.forEach((element) => {
-    if (element.classList.contains('is-visible')) return;
-    const distanceFromTop = element.getBoundingClientRect().top;
-    if (distanceFromTop < window.innerHeight * 0.9) {
-      element.classList.add('is-visible');
+    if (!menuButton || !nav) {
+      return;
     }
+
+    if (open) {
+      menuButton.classList.add("active");
+      nav.classList.add("open");
+      document.body.classList.add("menu-open");
+
+      menuButton.setAttribute("aria-expanded", "true");
+    } else {
+      menuButton.classList.remove("active");
+      nav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+
+      menuButton.setAttribute("aria-expanded", "false");
+    }
+  }
+
+
+  if (menuButton && nav) {
+
+    menuButton.addEventListener("click", function () {
+
+      const menuAberto = nav.classList.contains("open");
+
+      setMenu(!menuAberto);
+
+    });
+
+
+    navLinks.forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        setMenu(false);
+
+      });
+
+    });
+
+
+    window.addEventListener("resize", function () {
+
+      if (window.innerWidth > 1020) {
+
+        setMenu(false);
+
+      }
+
+    });
+
+  }
+
+
+  // =========================
+  // ANIMAÇÕES AO ROLAR A TELA
+  // =========================
+  if ("IntersectionObserver" in window) {
+
+    const revealObserver = new IntersectionObserver(
+
+      function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+    revealElements.forEach(function (element) {
+
+      revealObserver.observe(element);
+
+    });
+
+  } else {
+
+    revealElements.forEach(function (element) {
+
+      element.classList.add("visible");
+
+    });
+
+  }
+
+
+  // =========================
+  // DESTACAR ITEM DO MENU
+  // =========================
+  if ("IntersectionObserver" in window && sections.length > 0) {
+
+    const sectionObserver = new IntersectionObserver(
+
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+
+          const sectionId = entry.target.id;
+
+
+          navLinks.forEach(function (link) {
+
+            const href = link.getAttribute("href");
+
+
+            if (href === "#" + sectionId) {
+
+              link.classList.add("is-active");
+
+            } else {
+
+              link.classList.remove("is-active");
+
+            }
+
+          });
+
+        });
+
+      },
+
+      {
+        rootMargin: "-40% 0px -50% 0px",
+        threshold: 0
+      }
+
+    );
+
+
+    sections.forEach(function (section) {
+
+      sectionObserver.observe(section);
+
+    });
+
+  }
+
+
+  // =========================
+  // ROLAGEM SUAVE
+  // =========================
+  const linksInternos = document.querySelectorAll('a[href^="#"]');
+
+
+  linksInternos.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const destinoId = link.getAttribute("href");
+
+
+      if (!destinoId || destinoId === "#") {
+        return;
+      }
+
+
+      const destino = document.querySelector(destinoId);
+
+
+      if (destino) {
+
+        event.preventDefault();
+
+
+        destino.scrollIntoView({
+
+          behavior: "smooth",
+
+          block: "start"
+
+        });
+
+      }
+
+    });
+
   });
-};
 
-window.addEventListener('scroll', revealOnScroll, { passive: true });
-window.addEventListener('resize', revealOnScroll);
-revealOnScroll();
-
-const newsletterForm = document.querySelector('.footer form');
-newsletterForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const submitButton = newsletterForm.querySelector('button');
-  submitButton.textContent = '✓';
-  submitButton.setAttribute('aria-label', 'E-mail cadastrado');
-  newsletterForm.reset();
 });
