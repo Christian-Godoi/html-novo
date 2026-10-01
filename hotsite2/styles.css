@@ -1070,8 +1070,8 @@ a {
 
 .documentation-grid {
   display: grid;
-  grid-template-columns: 1fr .9fr;
-  gap: 70px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  gap: clamp(32px, 6vw, 80px);
   align-items: center;
 }
 
@@ -1093,9 +1093,13 @@ a {
 .documentation-file {
   display: flex;
   flex-direction: column;
-  gap: 26px;
-  padding: 10px 0 10px 36px;
-  border-left: 1px solid var(--lime-2);
+  gap: 24px;
+  padding: 30px;
+  border: 1px solid var(--gray-300);
+  border-top: 4px solid var(--lime);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: 0 14px 36px rgba(7, 29, 22, .08);
 }
 
 .documentation-format {
@@ -1331,9 +1335,7 @@ a {
   }
 
   .documentation-file {
-    padding: 26px 0 0;
-    border-top: 1px solid var(--lime-2);
-    border-left: 0;
+    padding: 24px;
   }
 
   .documentation-actions .btn {
