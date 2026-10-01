@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hotsite acadêmico do projeto Caleon — sistema de gerenciamento de supermercado desenvolvido no TCC do curso Técnico em Desenvolvimento de Sistemas." />
+  <meta name="theme-color" content="#0b2b1f" />
+  <title>Caleon | Hotsite do Projeto</title>
+
+  <link rel="icon" type="image/png" href="img/caleon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" id="topo">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Caleon - início">
+        <img src="img/caleon%202.png" alt="Logo Caleon" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+        <span class="brand-fallback">CALEON</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#projeto">O projeto</a>
+        <a href="#motivacao">Por que Caleon?</a>
+        <a href="#solucao">Solução</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#equipe">Equipe</a>
+        <a class="nav-cta" href="https://christian-godoi.github.io/html-novo/landinpage/index.html" target="_blank" rel="noopener noreferrer">Baixe o App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">TCC • DESENVOLVIMENTO DE SISTEMAS • 2026</span>
+          <h1>
+            Gestão de mercado<br>
+            <span>mais clara, integrada</span><br>
+            e inteligente.
+          </h1>
+          <p>
+            O Caleon nasceu como um projeto acadêmico para unir gestão operacional,
+            controle de estoque e experiência de compra em uma única plataforma.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projeto">VER O PROJETO</a>
+            <a class="btn btn-outline" href="#equipe">CONHECER A EQUIPE</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>Aplicativo móvel</span>
+            <span>Sistema web</span>
+            <span>Gestão + Delivery</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="Painel visual do projeto Caleon">
+          <div class="mock-window">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <small>caleon • visão geral</small>
+            </div>
+
+            <div class="mock-content">
+              <div class="mock-heading">
+                <div>
+                  <span>Visão geral</span>
+                  <strong>Seu negócio em um só lugar</strong>
+                </div>
+                <div class="status-pill">ONLINE</div>
+              </div>
+
+              <div class="mock-metrics">
+                <article>
+                  <span>Faturamento</span>
+                  <strong>R$ 72.650</strong>
+                  <small>+12,4% no período</small>
+                </article>
+                <article>
+                  <span>Pedidos</span>
+                  <strong>2.341</strong>
+                  <small>controle em tempo real</small>
+                </article>
+              </div>
+
+              <div class="chart-box">
+                <div class="chart-labels">
+                  <span>Desempenho</span>
+                  <b>Últimos períodos</b>
+                </div>
+                <svg class="chart" viewBox="0 0 620 180" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#9df01f" stop-opacity=".32"/>
+                      <stop offset="100%" stop-color="#9df01f" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="grid-line" d="M0 30H620 M0 80H620 M0 130H620" />
+                  <path class="chart-area" d="M0,145 C55,135 75,125 110,132 S175,103 215,112 S270,83 310,95 S365,62 405,78 S465,45 500,60 S560,28 620,35 L620,180 L0,180 Z" />
+                  <path class="chart-line" d="M0,145 C55,135 75,125 110,132 S175,103 215,112 S270,83 310,95 S365,62 405,78 S465,45 500,60 S560,28 620,35" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-badge badge-a">
+            <span>Caleon</span>
+          </div>
+          <div class="float-badge badge-b">
+            <span>Caleon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-strip" aria-label="Resumo do projeto">
+      <div class="container impact-grid">
+        <article class="reveal">
+          <strong>01</strong>
+          <span>ecossistema integrado</span>
+        </article>
+        <article class="reveal delay-1">
+          <strong>02</strong>
+          <span>frentes: gestão e cliente</span>
+        </article>
+        <article class="reveal delay-2">
+          <strong>08</strong>
+          <span>etapas de desenvolvimento</span>
+        </article>
+        <article class="reveal delay-3">
+          <strong>06</strong>
+          <span>integrantes no projeto</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section light-section" id="projeto">
+      <div class="container">
+        <div class="section-kicker reveal">NOSSO TCC</div>
+
+        <div class="split-title">
+          <h2 class="reveal">Mais que um sistema.<br><em>Uma solução para o varejo.</em></h2>
+          <div class="split-line reveal delay-1"></div>
+          <p class="reveal delay-2">
+            O Caleon foi concebido para pequenos e médios mercados que precisam centralizar
+            operações e, ao mesmo tempo, oferecer uma jornada digital simples ao consumidor.
+            A proposta integra um módulo administrativo, um aplicativo para o cliente e uma
+            estrutura de dados que conecta estoque, pedidos, produtos e usuários.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="info-card reveal">
+            <span class="card-number">01</span>
+            <h3>Gestão operacional</h3>
+            <p>
+              Cadastro de produtos, monitoramento de estoque, gestão de fornecedores,
+              fila de pedidos e indicadores financeiros em um painel gerencial.
+            </p>
+          </article>
+
+          <article class="info-card reveal delay-1">
+            <span class="card-number">02</span>
+            <h3>Experiência do cliente</h3>
+            <p>
+              Catálogo, busca e filtros, favoritos, sacola, checkout, perfil,
+              histórico de compras e acompanhamento do pedido.
+            </p>
+          </article>
+
+          <article class="info-card reveal delay-2">
+            <span class="card-number">03</span>
+            <h3>Integração</h3>
+            <p>
+              Front-end, back-end e banco de dados trabalhando em conjunto para
+              formar um ecossistema único, responsivo e escalável.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="motivacao">
+      <div class="container motivation-grid">
+        <div class="motivation-copy reveal">
+          <span class="eyebrow green">POR QUE ESCOLHEMOS ESTE TEMA?</span>
+          <h2>Porque gestão eficiente<br><span>também é tecnologia.</span></h2>
+          <p>
+            O varejo alimentar reúne processos que acontecem ao mesmo tempo: estoque,
+            pedidos, preços, fornecedores, vendas e atendimento. Quando essas informações
+            ficam espalhadas, a rotina perde agilidade e a tomada de decisão se torna mais difícil.
+          </p>
+          <p>
+            A escolha do tema surgiu da oportunidade de aplicar conhecimentos de desenvolvimento
+            de sistemas a um cenário próximo da realidade profissional, criando uma solução
+            que combina automação, organização de dados, experiência do usuário e mobilidade.
+          </p>
+        </div>
+
+        <div class="problem-stack">
+          <article class="problem-card reveal">
+            <span>DESAFIO 01</span>
+            <h3>Informações fragmentadas</h3>
+            <p>Produtos, estoque, pedidos e indicadores precisam conversar entre si.</p>
+          </article>
+          <article class="problem-card reveal delay-1">
+            <span>DESAFIO 02</span>
+            <h3>Decisão sem visibilidade</h3>
+            <p>Sem dados centralizados, acompanhar o negócio exige mais tempo e esforço.</p>
+          </article>
+          <article class="problem-card reveal delay-2">
+            <span>DESAFIO 03</span>
+            <h3>Experiência digital limitada</h3>
+            <p>O consumidor espera praticidade para encontrar, comprar e acompanhar seus pedidos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cream-section" id="solucao">
+      <div class="container">
+        <div class="center-heading reveal">
+          <span class="eyebrow dark">COMO O CALEON RESPONDE A ESSES DESAFIOS</span>
+          <h2>Da operação à compra,<br><em>tudo conectado.</em></h2>
+          <p>
+            A plataforma foi organizada em dois módulos principais, conectados por uma
+            arquitetura de software com API e banco de dados relacional.
+          </p>
+        </div>
+
+        <div class="solution-flow">
+          <article class="flow-card reveal">
+            <div class="flow-icon">01</div>
+            <div>
+              <h3>Administrador</h3>
+              <p>Controla estoque, catálogo, fornecedores, fila de pedidos e indicadores.</p>
+            </div>
+          </article>
+
+          <div class="flow-line reveal delay-1"></div>
+
+          <article class="flow-card reveal delay-1">
+            <div class="flow-icon">02</div>
+            <div>
+              <h3>API + Banco de Dados</h3>
+              <p>Centralizam regras de negócio, autenticação, transações e persistência dos dados.</p>
+            </div>
+          </article>
+
+          <div class="flow-line reveal delay-2"></div>
+
+          <article class="flow-card reveal delay-2">
+            <div class="flow-icon">03</div>
+            <div>
+              <h3>Cliente</h3>
+              <p>Navega no catálogo, cria sua sacola, finaliza compras e acompanha o pedido.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon">▣</span>
+            <h3>Dashboard gerencial</h3>
+            <p>Indicadores de faturamento, volume de pedidos e acompanhamento por status.</p>
+          </article>
+          <article class="feature-card reveal delay-1">
+            <span class="feature-icon">↻</span>
+            <h3>Estoque monitorado</h3>
+            <p>Classificação do nível de estoque e apoio à identificação de reposição.</p>
+          </article>
+          <article class="feature-card reveal delay-2">
+            <span class="feature-icon">◎</span>
+            <h3>Rastreamento</h3>
+            <p>Status do pedido e visualização da rota de entrega.</p>
+          </article>
+          <article class="feature-card reveal delay-3">
+            <span class="feature-icon">✓</span>
+            <h3>Segurança</h3>
+            <p>Comunicação via HTTPS/TLS, hash de senhas com Bcrypt e sessão com JWT.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech-section" id="tecnologias">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="reveal">
+            <span class="eyebrow green">TECNOLOGIAS</span>
+            <h2>Construído com ferramentas<br><span>que conectam ideia e execução.</span></h2>
+          </div>
+          <p class="reveal delay-1">
+            A stack foi escolhida para permitir prototipação, desenvolvimento web e mobile,
+            integração de API, persistência de dados e colaboração em equipe.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <strong>Figma</strong>
+            <span>UI/UX e prototipação</span>
+          </article>
+          <article class="tech-card reveal delay-1">
+            <strong>HTML5</strong>
+            <span>Estrutura web</span>
+          </article>
+          <article class="tech-card reveal delay-2">
+            <strong>CSS3</strong>
+            <span>Identidade e responsividade</span>
+          </article>
+          <article class="tech-card reveal delay-3">
+            <strong>JavaScript</strong>
+            <span>Interatividade</span>
+          </article>
+          <article class="tech-card reveal">
+            <strong>React</strong>
+            <span>Componentização web</span>
+          </article>
+          <article class="tech-card reveal delay-1">
+            <strong>React Native</strong>
+            <span>Aplicativo móvel</span>
+          </article>
+          <article class="tech-card reveal delay-2">
+            <strong>Node.js + Express</strong>
+            <span>API RESTful</span>
+          </article>
+          <article class="tech-card reveal delay-3">
+            <strong>MySQL</strong>
+            <span>Banco de dados relacional</span>
+          </article>
+          <article class="tech-card reveal">
+            <strong>PrumoBoard</strong>
+            <span>Gestão do projeto</span>
+          </article>
+          <article class="tech-card reveal delay-1">
+            <strong>Git + GitHub</strong>
+            <span>Versionamento e colaboração</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="processo">
+      <div class="container">
+        <div class="center-heading reveal">
+          <span class="eyebrow dark">DO PLANEJAMENTO À ENTREGA</span>
+          <h2>Nosso processo de<br><em>desenvolvimento.</em></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>01</span>
+            <div>
+              <h3>Requisitos e planejamento</h3>
+              <p>Definição do escopo, requisitos funcionais e não funcionais e organização no PrumoBoard.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>02</span>
+            <div>
+              <h3>Prototipagem e UI/UX</h3>
+              <p>Fluxos de navegação, arquitetura de informação e protótipos de alta fidelidade no Figma.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>03</span>
+            <div>
+              <h3>Banco de dados</h3>
+              <p>Modelagem conceitual, lógica e física para usuários, produtos, fornecedores e transações.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>04</span>
+            <div>
+              <h3>Back-end</h3>
+              <p>API RESTful em Node.js, rotas, autenticação e regras de negócio.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>05</span>
+            <div>
+              <h3>Front-end e app</h3>
+              <p>Construção das interfaces web e mobile com integração ao back-end.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>06</span>
+            <div>
+              <h3>Integração e hospedagem</h3>
+              <p>Configuração do ambiente e implantação da aplicação e base de dados.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>07</span>
+            <div>
+              <h3>Testes e ajustes</h3>
+              <p>Validação funcional, desempenho, usabilidade e segurança.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>08</span>
+            <div>
+              <h3>Documentação</h3>
+              <p>Registro técnico do projeto e preparação do TCC.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="equipe">
+      <div class="container team-layout">
+        <div class="team-heading reveal">
+          <span class="team-mini">NOSSA EQUIPE</span>
+          <h2>Um projeto coletivo.<br><em>Contribuições que se complementam.</em></h2>
+        </div>
+
+        <div class="group-photo reveal" id="foto-grupo">
+          <img
+            src="img/grupo.jpeg"
+            alt="Integrantes da equipe Caleon"
+            class="group-photo-image"
+          >
+        </div>
+
+        <div class="team-summary-row reveal">
+          <span class="summary-label">NOSSA ABORDAGEM</span>
+          <p>
+            Todos os integrantes contribuíram em diferentes etapas do desenvolvimento do Caleon.
+            As funções foram distribuídas conforme as áreas de atuação de cada integrante, reunindo
+            gestão, desenvolvimento, banco de dados, UI/UX, website e documentação.
+          </p>
+        </div>
+
+        <div class="team-divider"></div>
+
+        <div class="team-cards-grid">
+          <article class="team-person-card reveal">
+            <div class="person-topline"><span class="person-dot"></span><h3>Christian de Godoi Carvalho</h3></div>
+            <p class="person-role">Gestão • Aplicativo • Web • Documentação</p>
+            <ul>
+              <li>Gerenciamento do projeto no PrumoBoard, definição de sprints e controle do cronograma.</li>
+              <li>Codificação da interface do aplicativo móvel e implementação dos fluxos de autenticação e navegação.</li>
+              <li>Construção das páginas web de divulgação do aplicativo e do website institucional do grupo.</li>
+              <li>Redação e estruturação da documentação técnica final do TCC conforme as normas da ABNT.</li>
+            </ul>
+          </article>
+
+          <article class="team-person-card reveal delay-1">
+            <div class="person-topline"><span class="person-dot"></span><h3>Danilo Brant Brandão Alves</h3></div>
+            <p class="person-role">UI/UX • Figma • Usabilidade</p>
+            <ul>
+              <li>Mapeamento da jornada do usuário e arquitetura de usabilidade.</li>
+              <li>Criação de wireframes e protótipos de alta fidelidade no Figma.</li>
+              <li>Realização de testes de usabilidade.</li>
+              <li>Consolidação dos fluxos interativos de navegação da plataforma web e do aplicativo móvel.</li>
+            </ul>
+          </article>
+
+          <article class="team-person-card reveal">
+            <div class="person-topline"><span class="person-dot"></span><h3>Fernando Hiroshi Onishi</h3></div>
+            <p class="person-role">Banco de Dados • Aplicativo • UI/UX</p>
+            <ul>
+              <li>Modelagem e administração do banco de dados relacional.</li>
+              <li>Construção dos modelos conceitual, lógico e físico, criação do DDL e otimização de consultas.</li>
+              <li>Colaboração na programação de componentes lógicos e visuais do aplicativo móvel.</li>
+              <li>Participação na concepção do Design System e dos protótipos navegáveis no Figma.</li>
+            </ul>
+          </article>
+
+          <article class="team-person-card reveal delay-1">
+            <div class="person-topline"><span class="person-dot"></span><h3>Jonas Silva Gomes Santos</h3></div>
+            <p class="person-role">Website Institucional</p>
+            <ul>
+              <li>Desenvolvimento e manutenção do website institucional do grupo.</li>
+              <li>Codificação e estilização dos componentes visuais.</li>
+              <li>Garantia de acessibilidade e funcionamento correto da plataforma web.</li>
+              <li>Apresentação institucional da equipe e divulgação do portfólio de projetos.</li>
+            </ul>
+          </article>
+
+          <article class="team-person-card reveal">
+            <div class="person-topline"><span class="person-dot"></span><h3>Maria Eduarda Ferreira Santarelli</h3></div>
+            <p class="person-role">Landing Page • Front-end</p>
+            <ul>
+              <li>Desenvolvimento e design do website de divulgação do aplicativo Caleon.</li>
+              <li>Estruturação e estilização front-end do portal promocional.</li>
+              <li>Organização da arquitetura visual para apresentação clara das funcionalidades da plataforma.</li>
+            </ul>
+          </article>
+
+          <article class="team-person-card reveal delay-1">
+            <div class="person-topline"><span class="person-dot"></span><h3>Nícolas Barros Borges</h3></div>
+            <p class="person-role">Gestão • PrumoBoard</p>
+            <ul>
+              <li>Gerenciamento do projeto em conjunto com a operação do PrumoBoard.</li>
+              <li>Monitoramento do fluxo de trabalho e atualização do status das tarefas.</li>
+              <li>Categorização de impedimentos e verificação do cumprimento de metas.</li>
+              <li>Suporte na organização das atribuições individuais durante o desenvolvimento.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section manifesto-section">
+      <div class="container manifesto-grid">
+        <div class="reveal">
+          <span>CALEON</span>
+          <h2>Do estoque ao cliente,<br><em>uma visão mais clara.</em></h2>
+        </div>
+
+        <div class="manifesto-quote reveal delay-1">
+          <p>
+            “Construído para transformar dados operacionais em uma rotina mais organizada,
+            conectada e preparada para decisões melhores.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container landing-footer-main">
+      <div class="landing-footer-brand">
+        <img src="img/caleon%202.png" alt="Logo Caleon" class="landing-footer-logo">
+        <p>Gestão simples para negócios que<br>querem crescer com clareza.</p>
+        <a href="#">oi@caleon.com.br</a>
+      </div>
+
+      <div class="landing-footer-column">
+        <h4>PRODUTO</h4>
+        <a href="#projeto">Resultados</a>
+        <a href="#solucao">Recursos</a>
+        <a href="#inicio">Visão Geral</a>
+      </div>
+
+      <div class="landing-footer-column">
+        <h4>SUPORTE</h4>
+        <a href="#contato">Central de ajuda</a>
+        <a href="#equipe">Falar com a equipe</a>
+        <a href="#contato">Solicitar demonstração</a>
+      </div>
+
+      <div class="landing-footer-news">
+        <h4>RECEBA NOVIDADES</h4>
+        <p>Conteúdos práticos para deixar sua<br>operação mais eficiente.</p>
+        <form class="footer-news-form" onsubmit="return false;">
+          <input type="email" placeholder="Insira seu e-mail" aria-label="Insira seu e-mail">
+          <button type="submit" aria-label="Enviar e-mail">↪</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="landing-footer-bottom">
+      <div class="container landing-footer-bottom-inner">
+        <span>© 2026 Caleon. Todos os direitos reservados.</span>
+        <div class="landing-footer-links">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div class="landing-footer-payments">
+          <span class="pay-master"><i></i><i></i></span>
+          <img class="pay-pix" src="img/thesvg-color_pix.png" alt="Pix">
+          <strong>VISA</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
